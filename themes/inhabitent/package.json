@@ -1,7 +1,7 @@
 {
-  "name": "redstarter",
+  "name": "inhabitent",
   "version": "1.1.0",
-  "description": "A starter theme for RED students, based on Underscores.",
+  "description": "A theme for Inhabitent Website, a Red Academy Web Developer student project.",
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.23.6",
@@ -26,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/redacademy/redstarter.git"
+    "url": "git+https://github.com/ekaynak94/project-04-inhabitent"
   },
   "author": "redacademy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/redacademy/redstarter/issues"
+    "url": "https://github.com/ekaynak94/project-04-inhabitent/issues"
   },
-  "homepage": "https://github.com/redacademy/redstarter#readme"
+  "homepage": "https://github.com/ekaynak94/project-04-inhabitent/#readme"
 }

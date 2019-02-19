@@ -2,7 +2,7 @@
 /**
  * Custom functions that act independently of the theme templates.
  *
- * @package RED_Starter_Theme
+ * @package Inhabitent_Theme
  */
 
 /**
@@ -11,7 +11,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function red_starter_body_classes( $classes ) {
+function inhabitent_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -19,12 +19,12 @@ function red_starter_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'red_starter_body_classes' );
+add_filter( 'body_class', 'inhabitent_body_classes' );
 
-function red_starter_login_url($url){return get_site_url();}
-add_filter('login_headerurl','red_starter_login_url');
+function inhabitent_login_url($url){return get_site_url();}
+add_filter('login_headerurl','inhabitent_login_url');
 
-function red_starter_login_logo() {
+function inhabitent_login_logo() {
 	$logo_url=get_template_directory_uri().'./assets/images/logos/inhabitent-logo-text-dark.svg';
 	echo '<style type="text/css">                                                                   
 	#login h1 a, .login h1 a  { background-image:url(' . $logo_url . ');
@@ -39,4 +39,4 @@ function red_starter_login_logo() {
 	}    
 </style>';
 }
-add_action('login_head', 'red_starter_login_logo');
+add_action('login_head', 'inhabitent_login_logo');

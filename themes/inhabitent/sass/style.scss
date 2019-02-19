@@ -1,16 +1,15 @@
 /*!
-Theme Name: RED Starter Theme
+Theme Name: Inhabitent Theme
 Theme URI: http://underscores.me/
-Author: RED Academy
-Author URI: http://www.redacademy.com
-Description: A WordPress starter theme for RED Academy students.
+Author: Emre Kaynak
+Author URI: https://github.com/ekaynak94
+Description: Theme for Inhabitent Website, a Red Academy Web Developer student project.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags:
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+Red Starter theme, like WordPress, is licensed under the GPL and was used to build Inhabitent theme.
 
 RED Starter Theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
@@ -47,19 +46,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 // Imported but not included in the stylesheet.
 
-@import "variables";
-@import "mixins";
+@import 'variables';
+@import 'mixins';
 
 // CSS included in style.css.
 
-@import "normalize";
-@import "fonts";
-@import "typography";
-@import "elements";
-@import "forms";
-@import "navigation";
-@import "modules";
-@import "widgets";
-@import "content";
-@import "media";
-@import "page-templates";
+@import 'normalize';
+@import 'fonts';
+@import 'typography';
+@import 'elements';
+@import 'forms';
+@import 'navigation';
+@import 'modules';
+@import 'widgets';
+@import 'content';
+@import 'media';
+@import 'page-templates';
