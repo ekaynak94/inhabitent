@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying single posts.
+ * Template part for displaying products.
  *
  * @package Inhabitent_Theme
  */

@@ -56,11 +56,11 @@ function inhabitent_product() {
 		'capability_type'       => 'page',
 		'show_in_rest'    		=> true,
 		'template_lock'			=> 'all',
-        'template' => array(
+        /*'template' => array(
             array( 'core/paragraph', array(
                 'placeholder' => 'Description for the product',
-            ) ),
-        ),
+			) ),
+        ),*/
 	);
 	register_post_type( 'product', $args );
 
