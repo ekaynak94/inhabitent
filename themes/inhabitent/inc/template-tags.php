@@ -190,3 +190,8 @@
  		echo '</nav>';
  	}
  }
+
+ function inhabitent_get_latest_posts(){
+	$args = array( 'post_type' => 'post', 'orderby' => 'date','posts_per_page' => 3 );
+	return get_posts( $args ); // returns an array of posts
+ }
