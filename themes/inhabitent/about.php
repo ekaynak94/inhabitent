@@ -6,7 +6,7 @@
  */
 
 get_header(); ?>
-
+<style> .entry-header{margin-top:10vh;height:100vh;}</style>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 

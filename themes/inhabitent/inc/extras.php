@@ -43,3 +43,13 @@ function inhabitent_login_logo() {
 </style>';
 }
 add_action('login_head', 'inhabitent_login_logo');
+
+function inhabitent_all_products( $query ) {
+	if(!(is_admin()||$query->is_main_query())){return;}
+	if ( $query->is_post_type_archive( 'product' ) || $query->is_tax( 'product_type' )) {
+		$query-> set( 'orderby', 'title' );
+		$query-> set( 'order', 'ASC' );
+		$query->set( 'posts_per_page', 16 );
+	}
+}
+add_action( 'pre_get_posts', 'inhabitent_all_products',1);

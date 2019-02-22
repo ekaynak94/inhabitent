@@ -44,10 +44,3 @@ function inhabitent_product_type() {
 
 }
 add_action( 'init', 'inhabitent_product_type', 0 );
-
-//The following code was added to fix a problem where custom taxonomy term pages does not exist.Source @:https://stackoverflow.com/a/11932997
-add_action('init', 'custom_taxonomy_flush_rewrite');
-function custom_taxonomy_flush_rewrite() {
-    global $wp_rewrite;
-    $wp_rewrite->flush_rules();
-}
