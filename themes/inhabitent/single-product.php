@@ -9,23 +9,23 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		<?php if ( have_posts() ) : ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'template-parts/content', 'product' ); ?>
+				<a href='#' ><i class="fab fa-facebook-f"></i>like</a>
+				<a href='#' ><i class="fab fa-twitter"></i>tweet</a>
+				<a href='#' ><i class="fab fa-pinterest"></i>pin</a>
 
-			<?php get_template_part( 'template-parts/content', 'product' ); ?>
-			<?php the_post_navigation(); ?>
-            
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
+			<?php endwhile; // End of the loop. ?>
+		<?php else : ?>
 
-		<?php endwhile; // End of the loop. ?>
+			<?php get_template_part( 'template-parts/content','none' ); ?>
+
+		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

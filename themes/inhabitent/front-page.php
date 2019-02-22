@@ -22,9 +22,9 @@ get_header(); ?>
                   <?php $icon_url= get_template_directory_uri().'/assets/images/product-type-icons/' . $product_type->slug . '.svg';?>
                   <img src=<?php echo $icon_url?>>
                   <p><?php echo $product_type->description ?></p>
-                  <a href='#'> <?php echo $product_type->name?> stuff</a>
+                  <a href=<?php echo get_term_link($product_type)?>> <?php echo $product_type->name?> stuff</a>
                </div>
-            <?php endforeach; wp_reset_query(); ?>
+            <?php endforeach; wp_reset_postdata(); ?>
          </section>  
          <section>
             <?php $product_posts=inhabitent_get_latest_posts();?>
