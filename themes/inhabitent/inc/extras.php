@@ -36,6 +36,9 @@ function inhabitent_login_logo() {
 	}                        
 	.login .button.button-primary{
 		background-color:#248A83;
+	}
+	#login .message{
+		border-color:#248A83;
 	}    
 </style>';
 }
