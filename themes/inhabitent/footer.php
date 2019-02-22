@@ -15,9 +15,9 @@
 			  	<p><i class="fas fa-envelope"></i><a href="<?php echo esc_url('#'); ?>"><?php printf(esc_html('info@inhabitent.com')); ?></a></p>
 			  	<p><i class="fas fa-phone"></i><a href="<?php echo esc_url('#'); ?>"><?php printf(esc_html('778-456-7891')); ?></a></p>
 			  	<p>
-			  		<span><i class="fab fa-facebook-square"></i></span>
-			  		<span><i class="fab fa-twitter-square"></i></span>
-			  		<span><i class="fab fa-google-plus-square"></i></span>
+			  		<a href='#'><i class="fab fa-facebook-square"></i></a>
+			  		<a href='#'><i class="fab fa-twitter-square"></i></a>
+			  		<a href='#'><i class="fab fa-google-plus-square"></i></a>
 			  	</p>
 		 	</div>
 			<div class="footer-business-hours">
