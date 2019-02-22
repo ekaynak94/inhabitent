@@ -1,16 +1,17 @@
 <?php
  /**
  *
- * @package   Inhabitent Functionality
+ * @package   Inhabitent_Functionality
  * @author    Emre Kaynak <emrekaynak94@gmail.com>
  * @license   GPL-2.0+
- * @copyright 2019 Red Academy
+ * @copyright 2019 RED Academy
  *
  * @wordpress-plugin
  * Plugin Name: Inhabitent Functionality
  * Description: This very important plugin contains all of the core functionality for this website so that it remains theme-independent.
  * Version:     1.0.0
  * Author:      Emre Kaynak
+ * Author URI:  https://github.com/ekaynak94
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
