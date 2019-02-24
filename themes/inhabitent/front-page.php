@@ -18,8 +18,8 @@ get_header(); ?>
          >
             <img src="<?php echo get_template_directory_uri().'/assets/images/logos/inhabitent-logo-full.svg'?>">
          </section>
-         <section class="front-page-terms">
-            <div class="container">
+         <section class="shop-products">
+            <div class="front-page-terms container">
                <?php $product_types=get_terms('product_type');?>
                <?php foreach ( $product_types as $product_type ) : setup_postdata( $product_type ); ?>
                   <div>
@@ -30,8 +30,8 @@ get_header(); ?>
                <?php endforeach; wp_reset_postdata(); ?>
             </div>
          </section>  
-         <section class="front-page-posts">
-            <div class="container">
+         <section class="journal-posts">
+            <div class="front-page-posts container">
                <?php $product_posts=inhabitent_get_latest_posts();?>
                <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
                   <div>

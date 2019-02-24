@@ -17,32 +17,31 @@ get_header(); ?>
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 
 			?>
+			<div class="products-terms container">
+				<?php $product_types=get_terms('product_type');?>
+				<?php foreach ( $product_types as $product_type ) : setup_postdata( $product_type ); ?>
+				<div>
+					<a href=<?php echo get_term_link($product_type)?>> <?php echo $product_type->name?></a>
+				</div>
+				<?php endforeach; wp_reset_postdata(); ?>
+			</div>
 		</header><!-- .page-header -->
 		
-		<section>
-            <?php $product_types=get_terms('product_type');?>
-            <?php foreach ( $product_types as $product_type ) : setup_postdata( $product_type ); ?>
-               <div>
-                  <a href=<?php echo get_term_link($product_type)?>> <?php echo $product_type->name?></a>
-               </div>
-            <?php endforeach; wp_reset_postdata(); ?>
-		 </section>  
-		 <section>
+		<div class="products-grid container">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-					get_template_part( 'template-parts/content', 'products' );
+						get_template_part( 'template-parts/content', 'products' );
 				?>
 
 			<?php endwhile; ?>
+		</div>
+			<?php else : ?>
 
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content','none' ); ?>
-
-		<?php endif; ?>
-		</section>
+				<?php get_template_part( 'template-parts/content','none' ); ?>
+		
+			<?php endif; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 <?php get_footer(); ?>

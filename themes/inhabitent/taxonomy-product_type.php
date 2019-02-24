@@ -19,7 +19,7 @@ get_header(); ?>
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header --> 
-		 <section>
+		<div class="products-grid container">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -28,13 +28,13 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; ?>
-
+		</div>
 		<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content','none' ); ?>
 
 		<?php endif; ?>
-		</section>
+		
 		</main><!-- #main -->
 	</div><!-- #primary -->
 <?php get_footer(); ?>
