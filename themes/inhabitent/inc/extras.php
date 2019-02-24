@@ -62,3 +62,9 @@ add_filter( 'get_the_archive_title', function ( $title ) {
     return $title;
 
 });
+
+function seatch_placeholder( $html ) {
+
+	return str_replace( 'placeholder="SEARCH ', 'placeholder="Type and hit enter ', $html );
+}
+add_filter( 'get_search_form', 'seatch_placeholder' );

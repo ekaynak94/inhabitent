@@ -25,7 +25,7 @@ get_header(); ?>
                   <div>
                      <img src=<?php echo get_template_directory_uri().'/assets/images/product-type-icons/' . $product_type->slug . '.svg';?>>
                      <p><?php echo $product_type->description ?></p>
-                     <a href=<?php echo get_term_link($product_type)?>> <?php echo $product_type->name?> stuff</a>
+                     <a class="entry-link" href=<?php echo get_term_link($product_type)?>> <?php echo $product_type->name?> stuff</a>
                   </div>
                <?php endforeach; wp_reset_postdata(); ?>
             </div>
@@ -44,7 +44,7 @@ get_header(); ?>
                      <h3>
                         <?php the_title();?>
                      </h3>
-                     <a href=<?php the_permalink();?>>Read Entry</a>
+                     <a class="entry-link" href=<?php the_permalink();?>>Read Entry</a>
                </div>
                <?php endforeach; wp_reset_postdata(); ?>
             </div>

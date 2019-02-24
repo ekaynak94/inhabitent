@@ -21,4 +21,5 @@
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
+	<a class="readmore entry-link" href=<?php echo get_permalink();?>>Read More</a>
 </article><!-- #post-## -->
