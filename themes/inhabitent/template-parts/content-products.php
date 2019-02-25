@@ -17,9 +17,4 @@
 			<p><?php echo CFS()->get('product_price'); ?></p>
 		</div>
 	</div><!-- .entry-header -->
-
-
-	<footer class="entry-footer">
-		<?php inhabitent_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </div><!-- #post-## -->

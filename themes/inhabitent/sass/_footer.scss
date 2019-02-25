@@ -1,4 +1,4 @@
-footer {
+.site-footer {
   background-image: url('../../assets/images/dark-wood.png');
   color: white;
   padding: 1.5em 0;
@@ -34,7 +34,12 @@ footer {
     text-transform: uppercase;
     color: $color__brand-orange;
   }
-  a {
+  a,
+  a:visited {
     color: white;
+    &:hover {
+      color: white;
+      text-decoration: underline;
+    }
   }
 }

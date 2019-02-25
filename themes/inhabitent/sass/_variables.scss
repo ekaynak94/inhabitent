@@ -15,10 +15,6 @@ $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 $color__border-abbr: #666;
 
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
-
 $color__border: #e1e1e1;
 $color__dashed-border: #c8c8c8;
 $color__base-font: #404040;
@@ -30,6 +26,9 @@ $color__brand-yellow: #f0e4d1;
 $color__brand-lightgrey: #a1a1a1;
 $color__brand-mediumgrey: #808080;
 
+$color__link: $color__brand-green;
+$color__link-visited: $color__brand-green;
+$color__link-hover: $color__brand-purple;
 // Typography
 
 $font__main: sans-serif;

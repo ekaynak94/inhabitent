@@ -461,11 +461,11 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: #248a83; }
   a:visited {
-    color: purple; }
+    color: #248a83; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #2f1339; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -621,8 +621,15 @@ body {
   body h5,
   body h6,
   body a {
-    font-family: "Novecento Sans Web", sans-serif;
     text-decoration: none; }
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6 {
+    font-family: "Novecento Sans Web", sans-serif;
+    text-transform: uppercase; }
 
 .container {
   margin: 0 auto;
@@ -635,6 +642,8 @@ body {
   width: 100%;
   padding: 2px 2px 0 2px;
   margin-top: 1.5em; }
+  .site-header a {
+    font-family: "Novecento Sans Web", sans-serif; }
 
 .header-tent h1 {
   overflow: hidden;
@@ -645,11 +654,7 @@ body {
   z-index: 5;
   background-color: white;
   opacity: 0.7;
-  border: 1px solid grey; }
-  .sticky-header a {
-    color: #248a83; }
-    .sticky-header a:hover {
-      color: #2f1339; }
+  border: 1px solid #a1a1a1; }
   .sticky-header h1 {
     background: url("../../assets/images/logos/inhabitent-logo-tent.svg"), no-repeat;
     background-size: cover; }
@@ -741,11 +746,26 @@ body {
 .bypostauthor {
   display: block; }
 
-footer {
+.widget-area {
+  width: 30%;
+  border-left: 1px solid #a1a1a1;
+  padding-left: 2em;
+  padding-top: 2em; }
+  .widget-area i {
+    padding-right: 0.5em; }
+  .widget-area ul {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none; }
+
+.week-days {
+  font-weight: bold; }
+
+.site-footer {
   background-image: url("../../assets/images/dark-wood.png");
   color: white;
   padding: 1.5em 0; }
-  footer img {
+  .site-footer img {
     text-align: right;
     height: 3em;
     margin-top: 2em; }
@@ -785,8 +805,13 @@ footer {
   .footer-boxes h3 {
     text-transform: uppercase;
     color: #d99054; }
-  .footer-boxes a {
+  .footer-boxes a,
+  .footer-boxes a:visited {
     color: white; }
+    .footer-boxes a:hover,
+    .footer-boxes a:visited:hover {
+      color: white;
+      text-decoration: underline; }
 
 /*--------------------------------------------------------------
 # Media

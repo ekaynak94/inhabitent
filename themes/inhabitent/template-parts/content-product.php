@@ -21,8 +21,4 @@
 		<p class="product-price"><?php echo CFS()->get('product_price'); ?></p>
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php inhabitent_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
