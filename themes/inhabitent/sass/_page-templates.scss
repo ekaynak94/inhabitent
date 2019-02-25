@@ -3,3 +3,85 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+body.home {
+  h1,
+  h2 {
+    text-align: center;
+    margin: 4rem auto;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+.front-page-terms {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  li {
+    flex: 0 0 24%;
+    box-sizing: border-box;
+    border: 1px solid $color__brand-lightgrey;
+    border-top-width: 5px;
+    margin: 0 1em;
+    padding: 1.5em 0.7em;
+    &:hover {
+      border-color: $color__brand-orange;
+    }
+  }
+  a {
+    background-color: $color__brand-green;
+    color: white;
+    box-sizing: border-box;
+    padding: 0.5em 1em;
+    font-family: $font__accent-family;
+    text-transform: uppercase;
+    margin: 0.5em auto;
+    &:hover {
+      background-color: $color__brand-darkgreen;
+    }
+  }
+  img {
+    height: 70px;
+    width: auto;
+  }
+}
+.front-page-posts {
+  display: flex;
+  flex-flow: row, nowrap;
+  justify-content: center;
+
+  img {
+    max-height: 200px;
+    max-width: 300px;
+  }
+  h3 {
+    color: $color__brand-green;
+    font-size: $font__base-size * 1.2;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    flex: 0 0 30%;
+  }
+}
+.journal-text {
+  box-sizing: border-box;
+  border: 1px solid $color__brand-lightgrey;
+  border-top-width: 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 300px;
+  padding: 0.75em;
+  .link-button {
+    margin-left: 1em;
+  }
+  span {
+    font-size: $font__base-size * 0.75;
+  }
+}

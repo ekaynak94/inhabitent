@@ -18,36 +18,44 @@ get_header(); ?>
          >
             <img src="<?php echo get_template_directory_uri().'/assets/images/logos/inhabitent-logo-full.svg'?>">
          </section>
-         <section class="shop-products">
-            <div class="front-page-terms container">
+         <section class="container shop-products">
+            <h2>Shop Stuff</h2>
+            <ul class="front-page-terms">
+              
                <?php $product_types=get_terms('product_type');?>
                <?php foreach ( $product_types as $product_type ) : setup_postdata( $product_type ); ?>
-                  <div>
+                  <li>
                      <img src=<?php echo get_template_directory_uri().'/assets/images/product-type-icons/' . $product_type->slug . '.svg';?>>
                      <p><?php echo $product_type->description ?></p>
-                     <a class="entry-link" href=<?php echo get_term_link($product_type)?>> <?php echo $product_type->name?> stuff</a>
-                  </div>
+                     <a href=<?php echo get_term_link($product_type)?>> <?php echo $product_type->name?> stuff</a>
+                  </li>
                <?php endforeach; wp_reset_postdata(); ?>
-            </div>
+            </ul>
          </section>  
-         <section class="journal-posts">
-            <div class="front-page-posts container">
+         <section class="container journal-posts">
+         <h2>Inhabitent Journal</h2>   
+         <ul class="front-page-posts">
+            
                <?php $product_posts=inhabitent_get_latest_posts();?>
                <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
-                  <div>
+                  <li>
                      <?php the_post_thumbnail('medium',['class'=>'thumbnail']);?>
-                     <span>
-                        <?php the_date();?>
-                        <?php echo '/';?>
-                        <?php comments_number(); ?>
-                     </span>
-                     <h3>
-                        <?php the_title();?>
-                     </h3>
-                     <a class="entry-link" href=<?php the_permalink();?>>Read Entry</a>
-               </div>
+                     <div class='journal-text'>
+                        <span>
+                           <?php the_date();?>
+                           <?php echo '/';?>
+                           <?php comments_number(); ?>
+                        </span>
+                        <h3>
+                           <a href=<?php the_permalink();?>>
+                              <?php the_title();?>
+                           </a>
+                        </h3>
+                        <a class="link-button" href=<?php the_permalink();?>>Read Entry</a>
+                     </div>
+                  </li>
                <?php endforeach; wp_reset_postdata(); ?>
-            </div>
+         </ul>
          </section>
 
   

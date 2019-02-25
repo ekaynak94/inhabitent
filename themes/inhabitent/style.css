@@ -42,6 +42,137 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -619,21 +750,31 @@ body {
   body h3,
   body h4,
   body h5,
-  body h6,
-  body a {
-    text-decoration: none; }
-  body h1,
-  body h2,
-  body h3,
-  body h4,
-  body h5,
   body h6 {
     font-family: "Novecento Sans Web", sans-serif;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.75;
+    margin: 1em 0; }
 
 .container {
   margin: 0 auto;
   max-width: 1120px; }
+
+.link-button {
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.5em 1em;
+  font-family: "Novecento Sans Web";
+  text-transform: uppercase;
+  margin: 0.5em auto;
+  color: black !important; }
+  .link-button:hover {
+    border-color: #248a83;
+    background-color: #248a83;
+    color: white !important; }
 
 .site-header {
   position: fixed;
@@ -652,8 +793,7 @@ body {
 
 .sticky-header {
   z-index: 5;
-  background-color: white;
-  opacity: 0.7;
+  background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid #a1a1a1; }
   .sticky-header h1 {
     background: url("../../assets/images/logos/inhabitent-logo-tent.svg"), no-repeat;
@@ -803,6 +943,7 @@ body {
   .footer-boxes i {
     padding-right: 0.5em; }
   .footer-boxes h3 {
+    font-size: 19.2px;
     text-transform: uppercase;
     color: #d99054; }
   .footer-boxes a,
@@ -877,3 +1018,98 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+body.home h1,
+body.home h2 {
+  text-align: center;
+  margin: 4rem auto; }
+
+body.home ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.front-page-terms {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .front-page-terms li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 24%;
+            flex: 0 0 24%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid #a1a1a1;
+    border-top-width: 5px;
+    margin: 0 1em;
+    padding: 1.5em 0.7em; }
+    .front-page-terms li:hover {
+      border-color: #d99054; }
+  .front-page-terms a {
+    background-color: #248a83;
+    color: white;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0.5em 1em;
+    font-family: "Novecento Sans Web";
+    text-transform: uppercase;
+    margin: 0.5em auto; }
+    .front-page-terms a:hover {
+      background-color: #19625d; }
+  .front-page-terms img {
+    height: 70px;
+    width: auto; }
+
+.front-page-posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row, nowrap;
+          flex-flow: row, nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .front-page-posts img {
+    max-height: 200px;
+    max-width: 300px; }
+  .front-page-posts h3 {
+    color: #248a83;
+    font-size: 19.2px;
+    margin-top: 0;
+    margin-bottom: 1em; }
+  .front-page-posts li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 1em;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%; }
+
+.journal-text {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #a1a1a1;
+  border-top-width: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  max-width: 300px;
+  padding: 0.75em; }
+  .journal-text .link-button {
+    margin-left: 1em; }
+  .journal-text span {
+    font-size: 12px; }

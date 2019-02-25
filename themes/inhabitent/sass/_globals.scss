@@ -3,15 +3,7 @@ body {
   line-height: $font__base-line-height;
   font-family: $font__main-family, $font__main;
   background-color: $color__main-background;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  a {
-    text-decoration: none;
-  }
+
   h1,
   h2,
   h3,
@@ -20,10 +12,29 @@ body {
   h6 {
     font-family: $font__accent-family, $font__main;
     text-transform: uppercase;
+    font-weight: bold;
+    font-size: $font__base-size * 2;
+    line-height: $font__base-line-height;
+    margin: 1em 0;
   }
 }
 
 .container {
   margin: 0 auto;
   max-width: 1120px;
+}
+
+.link-button {
+  border: 1px solid black;
+  box-sizing: border-box;
+  padding: 0.5em 1em;
+  font-family: $font__accent-family;
+  text-transform: uppercase;
+  margin: 0.5em auto;
+  color: black !important;
+  &:hover {
+    border-color: $color__brand-green;
+    background-color: $color__brand-green;
+    color: white !important;
+  }
 }
