@@ -15,8 +15,11 @@ body {
     font-weight: bold;
     font-size: $font__base-size * 2;
     line-height: $font__base-line-height;
-    margin: 1em 0;
+    text-decoration: none;
   }
+}
+a {
+  text-decoration: none;
 }
 
 .container {

@@ -42,137 +42,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol,
-ul {
-  list-style: none; }
-
-blockquote,
-q {
-  quotes: none; }
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-a {
-  text-decoration: none; }
-
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -756,9 +625,17 @@ body {
     font-weight: bold;
     font-size: 32px;
     line-height: 1.75;
-    margin: 1em 0; }
+    text-decoration: none; }
 
-.container {
+a {
+  text-decoration: none; }
+
+.container, .blog .site-content,
+.single-post .site-content,
+.archive.category .site-content,
+.archive.date .site-content,
+.page-id-29 .site-content, .page-template-about .site-content h2,
+.page-template-about .site-content p {
   margin: 0 auto;
   max-width: 1120px; }
 
@@ -775,78 +652,6 @@ body {
     border-color: #248a83;
     background-color: #248a83;
     color: white !important; }
-
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 2px 2px 0 2px;
-  margin-top: 1.5em; }
-  .site-header a {
-    font-family: "Novecento Sans Web", sans-serif; }
-
-.header-tent h1 {
-  overflow: hidden;
-  height: 33px;
-  width: 50px; }
-
-.sticky-header {
-  z-index: 5;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid #a1a1a1; }
-  .sticky-header h1 {
-    background: url("../../assets/images/logos/inhabitent-logo-tent.svg"), no-repeat;
-    background-size: cover; }
-
-.fixed-header {
-  position: absolute;
-  color: white;
-  background-color: none; }
-  .fixed-header a {
-    color: white; }
-    .fixed-header a:hover {
-      color: #f0e4d1; }
-  .fixed-header h1 {
-    background: url("../../assets/images/logos/inhabitent-logo-tent-white.svg"), no-repeat;
-    background-size: cover; }
-
-.header-wrapper {
-  height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row, nowrap;
-          flex-flow: row, nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .header-wrapper .main-navigation {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap; }
-    .header-wrapper .main-navigation .menu-item {
-      text-transform: uppercase;
-      padding: 0 0.5em; }
-
-.search-form fieldset {
-  margin: 0;
-  padding: 0; }
 
 /*--------------------------------------------------------------
 # Content
@@ -885,74 +690,6 @@ body {
 
 .bypostauthor {
   display: block; }
-
-.widget-area {
-  width: 30%;
-  border-left: 1px solid #a1a1a1;
-  padding-left: 2em;
-  padding-top: 2em; }
-  .widget-area i {
-    padding-right: 0.5em; }
-  .widget-area ul {
-    margin-left: 0;
-    padding-left: 0;
-    list-style-type: none; }
-
-.week-days {
-  font-weight: bold; }
-
-.site-footer {
-  background-image: url("../../assets/images/dark-wood.png");
-  color: white;
-  padding: 1.5em 0; }
-  .site-footer img {
-    text-align: right;
-    height: 3em;
-    margin-top: 2em; }
-
-.footer-copyright {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Novecento Sans Web", sans-serif; }
-
-.footer-boxes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row, wrap;
-          flex-flow: row, wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  line-height: 1.2; }
-  .footer-boxes .footer-text {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; }
-    .footer-boxes .footer-text div {
-      padding-right: 3em; }
-  .footer-boxes i {
-    padding-right: 0.5em; }
-  .footer-boxes h3 {
-    font-size: 19.2px;
-    text-transform: uppercase;
-    color: #d99054; }
-  .footer-boxes a,
-  .footer-boxes a:visited {
-    color: white; }
-    .footer-boxes a:hover,
-    .footer-boxes a:visited:hover {
-      color: white;
-      text-decoration: underline; }
 
 /*--------------------------------------------------------------
 # Media
@@ -1014,10 +751,6 @@ object {
 .gallery-caption {
   display: block; }
 
-/*--------------------------------------------------------------
-# Page Templates
---------------------------------------------------------------*/
-/* Front page */
 body.home h1,
 body.home h2 {
   text-align: center;
@@ -1113,3 +846,202 @@ body.home ul {
     margin-left: 1em; }
   .journal-text span {
     font-size: 12px; }
+
+.blog .site-content,
+.single-post .site-content,
+.archive.category .site-content,
+.archive.date .site-content,
+.page-id-29 .site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin-top: 60px; }
+  .blog .site-content #primary,
+  .single-post .site-content #primary,
+  .archive.category .site-content #primary,
+  .archive.date .site-content #primary,
+  .page-id-29 .site-content #primary {
+    max-width: 60%;
+    border-right: 1px solid #a1a1a1; }
+  .blog .site-content #secondary,
+  .single-post .site-content #secondary,
+  .archive.category .site-content #secondary,
+  .archive.date .site-content #secondary,
+  .page-id-29 .site-content #secondary {
+    max-width: 30%; }
+
+.page-id-29 iframe {
+  border: none;
+  height: 300px; }
+
+.page-id-29 label {
+  text-transform: uppercase; }
+
+.page-id-29 input,
+.page-id-29 textarea {
+  background-color: #f4f4f4;
+  border-radius: 0; }
+
+.page-id-29 input[type='submit'] {
+  border: none;
+  color: white;
+  background-color: #248a83;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-transform: uppercase;
+  height: 3em;
+  width: 8em; }
+  .page-id-29 input[type='submit']:hover {
+    background-color: #19625d; }
+
+.page-template-about .site-content {
+  margin-bottom: 3em; }
+  .page-template-about .site-content h2,
+  .page-template-about .site-content p {
+    padding: 1em 2em; }
+  .page-template-about .site-content h2 {
+    text-align: center; }
+  .page-template-about .site-content h1 {
+    color: white; }
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2px 2px 0 2px;
+  margin-top: 1.5em; }
+  .site-header a {
+    font-family: "Novecento Sans Web", sans-serif; }
+
+.header-tent h1 {
+  overflow: hidden;
+  height: 33px;
+  width: 50px; }
+
+.sticky-header {
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #a1a1a1; }
+  .sticky-header h1 {
+    background: url("../../assets/images/logos/inhabitent-logo-tent.svg"), no-repeat;
+    background-size: cover; }
+
+.fixed-header {
+  position: absolute;
+  color: white;
+  background-color: none; }
+  .fixed-header a {
+    color: white; }
+    .fixed-header a:hover {
+      color: #f0e4d1; }
+  .fixed-header h1 {
+    background: url("../../assets/images/logos/inhabitent-logo-tent-white.svg"), no-repeat;
+    background-size: cover; }
+
+.header-wrapper {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row, nowrap;
+          flex-flow: row, nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .header-wrapper .main-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap; }
+    .header-wrapper .main-navigation .menu-item {
+      text-transform: uppercase;
+      padding: 0 0.5em; }
+
+.search-form fieldset {
+  margin: 0;
+  padding: 0; }
+
+.widget-area {
+  padding-left: 2em;
+  padding-top: 2em; }
+  .widget-area i {
+    padding-right: 0.5em; }
+  .widget-area ul {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none; }
+
+.week-days {
+  font-weight: bold; }
+
+.site-footer {
+  background-image: url("../../assets/images/dark-wood.png");
+  color: white;
+  padding: 1.5em 0; }
+  .site-footer img {
+    text-align: right;
+    height: 3em;
+    margin-top: 2em; }
+
+.footer-copyright {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Novecento Sans Web", sans-serif; }
+
+.footer-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row, wrap;
+          flex-flow: row, wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 1.2; }
+  .footer-boxes .footer-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .footer-boxes .footer-text div {
+      padding-right: 3em; }
+  .footer-boxes i {
+    padding-right: 0.5em; }
+  .footer-boxes h3 {
+    font-size: 19.2px;
+    text-transform: uppercase;
+    color: #d99054; }
+  .footer-boxes a,
+  .footer-boxes a:visited {
+    color: white; }
+    .footer-boxes a:hover,
+    .footer-boxes a:visited:hover {
+      color: white;
+      text-decoration: underline; }

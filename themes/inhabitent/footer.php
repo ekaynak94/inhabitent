@@ -6,6 +6,7 @@
  */
 
 ?>
+		</div>
 			<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="container">
 				<div class='footer-boxes'>

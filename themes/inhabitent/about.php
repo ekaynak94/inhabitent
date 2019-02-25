@@ -6,7 +6,7 @@
  */
 
 get_header(); ?>
-<style> .entry-header{margin-top:10vh;height:100vh;}</style>
+<style> .entry-header{height:100vh;}</style>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -19,5 +19,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
