@@ -20,14 +20,13 @@
 		<div id="page" class="hfeed site">
 			<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
-			<header id="masthead" class="site-header" role="banner">
-				<div class="site-branding">
-					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-				</div><!-- .site-branding -->
-				<div class='header-wrapper container'>
-					<div class="header-tent">
-						<a href="<?php echo get_site_url(); ?>"><img class='tent-logo' src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/inhabitent-logo-tent.svg"/></a>	
+			<header id="masthead" class="site-header sticky-header" role="banner">
+				<div class='header-wrapper container'>	
+					<div class="site-branding">
+						<div class="header-tent">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><h1 class="site-title"><span class='screen-reader-text'><?php bloginfo( 'name' ); ?></span></h1></a>
+							<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+						</div><!-- .site-branding -->
 					</div>
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>

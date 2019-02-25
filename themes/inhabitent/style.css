@@ -621,26 +621,50 @@ body {
   body h5,
   body h6,
   body a {
-    font-family: "Novecento Sans Web", sans-serif; }
+    font-family: "Novecento Sans Web", sans-serif;
+    text-decoration: none; }
 
 .container {
   margin: 0 auto;
   max-width: 1120px; }
 
 .site-header {
-  opacity: 0.7;
-  z-index: 5;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: white;
-  border: 1px solid grey;
   width: 100%;
-  padding: 2px 2px 0 2px; }
-  .site-header a {
+  padding: 2px 2px 0 2px;
+  margin-top: 1.5em; }
+
+.header-tent h1 {
+  overflow: hidden;
+  height: 33px;
+  width: 50px; }
+
+.sticky-header {
+  z-index: 5;
+  background-color: white;
+  opacity: 0.7;
+  border: 1px solid grey; }
+  .sticky-header a {
     color: #248a83; }
-    .site-header a:hover {
+    .sticky-header a:hover {
       color: #2f1339; }
+  .sticky-header h1 {
+    background: url("../../assets/images/logos/inhabitent-logo-tent.svg"), no-repeat;
+    background-size: cover; }
+
+.fixed-header {
+  position: absolute;
+  color: white;
+  background-color: none; }
+  .fixed-header a {
+    color: white; }
+    .fixed-header a:hover {
+      color: #f0e4d1; }
+  .fixed-header h1 {
+    background: url("../../assets/images/logos/inhabitent-logo-tent-white.svg"), no-repeat;
+    background-size: cover; }
 
 .header-wrapper {
   height: 60px;
@@ -674,10 +698,6 @@ body {
     .header-wrapper .main-navigation .menu-item {
       text-transform: uppercase;
       padding: 0 0.5em; }
-
-.header-tent img {
-  height: 40px;
-  width: auto; }
 
 .search-form fieldset {
   margin: 0;
@@ -766,8 +786,7 @@ footer {
     text-transform: uppercase;
     color: #d99054; }
   .footer-boxes a {
-    color: white;
-    text-decoration: none; }
+    color: white; }
 
 /*--------------------------------------------------------------
 # Media
