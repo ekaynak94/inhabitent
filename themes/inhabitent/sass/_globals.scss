@@ -1,0 +1,20 @@
+body {
+  font-size: $font__base-size;
+  line-height: $font__base-line-height;
+  font-family: $font__main-family, $font__main;
+  background-color: $color__main-background;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a {
+    font-family: $font__accent-family, $font__main;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1120px;
+}

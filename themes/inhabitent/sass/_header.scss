@@ -1,0 +1,47 @@
+.site-header {
+  opacity: 0.7;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border: 1px solid grey;
+  width: 100%;
+  padding: 2px 2px 0 2px;
+  a {
+    color: $color__brand-green;
+    &:hover {
+      color: $color__brand-purple;
+    }
+  }
+}
+
+.header-wrapper {
+  height: 60px;
+  display: flex;
+  flex-flow: row, nowrap;
+  justify-content: space-between;
+  align-items: center;
+  .main-navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: row, nowrap;
+    .menu-item {
+      text-transform: uppercase;
+      padding: 0 0.5em;
+    }
+  }
+}
+.header-tent {
+  img {
+    height: 40px;
+    width: auto;
+  }
+}
+.search-form {
+  fieldset {
+    margin: 0;
+    padding: 0;
+  }
+}
