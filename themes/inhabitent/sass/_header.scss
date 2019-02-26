@@ -16,6 +16,40 @@
     width: 50px;
   }
 }
+
+.search-form {
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .search-submit {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: $color__brand-green;
+    float: left;
+  }
+
+  input {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-transform: uppercase;
+  }
+
+  .search-field {
+    display: none;
+  }
+  .search-field-on {
+    display: inline-block;
+  }
+}
+
 .sticky-header {
   z-index: 5;
   background-color: rgba(255, 255, 255, 0.7);
@@ -43,6 +77,19 @@
       no-repeat;
     background-size: cover;
   }
+
+  .search-field {
+    &::placeholder {
+      color: $color__brand-yellow;
+    }
+  }
+
+  .search-submit {
+    color: white;
+    &:hover {
+      color: $color__brand-yellow;
+    }
+  }
 }
 
 .header-wrapper {
@@ -60,11 +107,5 @@
       text-transform: uppercase;
       padding: 0 0.5em;
     }
-  }
-}
-.search-form {
-  fieldset {
-    margin: 0;
-    padding: 0;
   }
 }

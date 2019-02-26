@@ -120,6 +120,9 @@ body.blog {
 .page-template-about {
   .site-content {
     margin-bottom: 3em;
+    .entry-content {
+      margin-top: 0;
+    }
     h2,
     p {
       padding: 1em 2em;

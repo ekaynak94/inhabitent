@@ -1020,6 +1020,8 @@ body.blog .entry-meta {
 
 .page-template-about .site-content {
   margin-bottom: 3em; }
+  .page-template-about .site-content .entry-content {
+    margin-top: 0; }
   .page-template-about .site-content h2,
   .page-template-about .site-content p {
     padding: 1em 2em; }
@@ -1112,6 +1114,37 @@ body.blog .entry-meta {
   height: 33px;
   width: 50px; }
 
+.search-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+.search-form .search-submit {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #248a83;
+  float: left; }
+
+.search-form input {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-transform: uppercase; }
+
+.search-form .search-field {
+  display: none; }
+
+.search-form .search-field-on {
+  display: inline-block; }
+
 .sticky-header {
   z-index: 5;
   background-color: rgba(255, 255, 255, 0.7);
@@ -1131,6 +1164,16 @@ body.blog .entry-meta {
   .fixed-header h1 {
     background: url("../../assets/images/logos/inhabitent-logo-tent-white.svg"), no-repeat;
     background-size: cover; }
+  .fixed-header .search-field::-webkit-input-placeholder {
+    color: #f0e4d1; }
+  .fixed-header .search-field::-ms-input-placeholder {
+    color: #f0e4d1; }
+  .fixed-header .search-field::placeholder {
+    color: #f0e4d1; }
+  .fixed-header .search-submit {
+    color: white; }
+    .fixed-header .search-submit:hover {
+      color: #f0e4d1; }
 
 .header-wrapper {
   height: 60px;
@@ -1164,10 +1207,6 @@ body.blog .entry-meta {
     .header-wrapper .main-navigation .menu-item {
       text-transform: uppercase;
       padding: 0 0.5em; }
-
-.search-form fieldset {
-  margin: 0;
-  padding: 0; }
 
 .widget-area {
   padding-left: 2em;
