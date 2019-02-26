@@ -17,14 +17,14 @@ get_header(); ?>
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 
 			?>
-			<div class="products-terms container">
+			<ul class="products-terms container">
 				<?php $product_types=get_terms('product_type');?>
 				<?php foreach ( $product_types as $product_type ) : setup_postdata( $product_type ); ?>
-				<div>
+				<li>
 					<a href=<?php echo get_term_link($product_type)?>> <?php echo $product_type->name?></a>
-				</div>
+				</li>
 				<?php endforeach; wp_reset_postdata(); ?>
-			</div>
+			</ul>
 		</header><!-- .page-header -->
 		
 		<div class="products-grid container">

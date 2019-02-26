@@ -7,14 +7,16 @@
 
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="product-grid-item">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<a href=<?php echo get_permalink();?>><?php the_post_thumbnail( 'medium' ); ?></a>
-		<?php endif; ?>
-		<div class="product-grid-text">
-			<?php the_title( '<p class="entry-title">', '</p>' ); ?>
-			<p><?php echo CFS()->get('product_price'); ?></p>
+<div class="product-grid-item" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if ( has_post_thumbnail() ) : ?>
+		<div class='product-image-wrapper'>
+			<a href=<?php echo get_permalink();?>>
+				<?php the_post_thumbnail( 'medium' ); ?>
+			</a>
 		</div>
-	</div><!-- .entry-header -->
+	<?php endif; ?>
+	<div class="product-grid-text">
+		<?php the_title( '<p class="entry-title">', '</p>' ); ?>
+		<p><?php echo CFS()->get('product_price'); ?></p>
+	</div>
 </div><!-- #post-## -->

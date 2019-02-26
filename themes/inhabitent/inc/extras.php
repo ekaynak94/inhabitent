@@ -54,14 +54,15 @@ function inhabitent_all_products( $query ) {
 }
 add_action( 'pre_get_posts', 'inhabitent_all_products',1);
 
-add_filter( 'get_the_archive_title', function ( $title ) {
+add_filter( 'get_the_archive_title', 'replace_shop_title');
+function replace_shop_title( $title ) {
 
 	if( is_post_type_archive('product') ) { $title='Shop Stuff' ;}
-	if(is_tax( 'product_type' )){$title=single_cat_title( '', false );}
+	if(is_tax( 'product_type' )){$title=single_term_title( '', false );}
 
     return $title;
 
-});
+}
 
 function seatch_placeholder( $html ) {
 

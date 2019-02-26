@@ -63,7 +63,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import 'content';
 @import 'media';
 @import 'front-page-template';
-@import 'sidebar-pages';
+@import '_page-templates';
+@import '_shop-template';
 @import 'header';
 @import 'sidebar';
 @import 'footer';
