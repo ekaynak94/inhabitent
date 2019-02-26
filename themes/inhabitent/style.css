@@ -656,6 +656,22 @@ a {
     background-color: #248a83;
     color: white !important; }
 
+.archive-links {
+  padding-left: 1em; }
+  .archive-links a {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    padding: 0.5em 1em; }
+    .archive-links a i {
+      padding-right: 1em; }
+    .archive-links a:hover {
+      color: white;
+      border-color: #248a83;
+      background-color: #248a83; }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -941,46 +957,6 @@ body.home ul {
   text-transform: uppercase;
   font-family: sans-serif; }
 
-.blog .archive-links,
-.single-post .archive-links,
-.archive.category .archive-links,
-.archive.date .archive-links,
-.page-id-29 .archive-links,
-.search-results .archive-links,
-.search-no-results .archive-links {
-  padding-left: 1em; }
-  .blog .archive-links a,
-  .single-post .archive-links a,
-  .archive.category .archive-links a,
-  .archive.date .archive-links a,
-  .page-id-29 .archive-links a,
-  .search-results .archive-links a,
-  .search-no-results .archive-links a {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    padding: 0.5em 1em; }
-    .blog .archive-links a i,
-    .single-post .archive-links a i,
-    .archive.category .archive-links a i,
-    .archive.date .archive-links a i,
-    .page-id-29 .archive-links a i,
-    .search-results .archive-links a i,
-    .search-no-results .archive-links a i {
-      padding-right: 1em; }
-    .blog .archive-links a:hover,
-    .single-post .archive-links a:hover,
-    .archive.category .archive-links a:hover,
-    .archive.date .archive-links a:hover,
-    .page-id-29 .archive-links a:hover,
-    .search-results .archive-links a:hover,
-    .search-no-results .archive-links a:hover {
-      color: white;
-      border-color: #248a83;
-      background-color: #248a83; }
-
 .page-id-29 iframe {
   border: none;
   height: 300px; }
@@ -1126,6 +1102,33 @@ body.blog .entry-meta {
   border-top-width: 3px; }
   .product-grid-text p {
     line-height: 1; }
+
+.single-product {
+  margin-top: 60px; }
+  .single-product .content-area {
+    padding: 2em 0; }
+  .single-product article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .single-product .product-page-image {
+    max-width: 50%; }
+  .single-product .product-page-info {
+    max-width: 45%; }
+    .single-product .product-page-info h1 {
+      color: #d99054;
+      margin-top: 0;
+      font-size: 2.5em; }
+    .single-product .product-page-info .product-price {
+      font-size: 1.5em;
+      font-weight: bold; }
 
 .site-header {
   position: fixed;

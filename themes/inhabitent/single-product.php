@@ -13,11 +13,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'product' ); ?>
-				<div class="archive-links">
-					<a href='#' ><i class="fab fa-facebook-f"></i>like</a>
-					<a href='#' ><i class="fab fa-twitter"></i>tweet</a>
-					<a href='#' ><i class="fab fa-pinterest"></i>pin</a>
-				</div>
+		
 			<?php endwhile; // End of the loop. ?>
 		<?php else : ?>
 

@@ -46,26 +46,8 @@
       font-family: $font__main;
     }
   }
-  .archive-links {
-    padding-left: 1em;
-    a {
-      background-color: white;
-      color: black;
-      border: 1px solid black;
-      text-transform: uppercase;
-      font-family: $font__main;
-      padding: 0.5em 1em;
-      i {
-        padding-right: 1em;
-      }
-      &:hover {
-        color: white;
-        border-color: $color__brand-green;
-        background-color: $color__brand-green;
-      }
-    }
-  }
 }
+
 //findus
 .page-id-29 {
   iframe {
