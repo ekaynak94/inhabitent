@@ -83,7 +83,9 @@
       color: $color__brand-yellow;
     }
   }
-
+  input[type='search'] {
+    color: $color__brand-yellow;
+  }
   .search-submit {
     color: white;
     &:hover {

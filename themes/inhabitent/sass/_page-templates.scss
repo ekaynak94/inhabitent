@@ -3,7 +3,8 @@
 .archive.category,
 .archive.date,
 .page-id-29,
-.search-results {
+.search-results,
+.search-no-results {
   .site-content {
     @extend .container;
     display: flex;
@@ -145,5 +146,24 @@ body.blog {
   }
   article {
     padding: 2em;
+  }
+}
+.search-no-results .site-content {
+  .search-form {
+    .search-submit {
+      display: none;
+    }
+
+    input {
+      background-color: #f4f4f4;
+      border: 1px solid $color__brand-lightgrey;
+      border-radius: 1;
+      box-shadow: none;
+      text-transform: none;
+    }
+
+    .search-field {
+      display: inline-block;
+    }
   }
 }
