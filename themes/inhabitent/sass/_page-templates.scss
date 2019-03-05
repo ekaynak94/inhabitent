@@ -4,7 +4,8 @@
 .archive.date,
 .page-id-29,
 .search-results,
-.search-no-results {
+.search-no-results,
+.error404 {
   .site-content {
     @extend .container;
     display: flex;
@@ -147,5 +148,25 @@ body.blog {
     .search-field {
       display: inline-block;
     }
+  }
+}
+// 404 page
+.error404 {
+  .search-form {
+    .search-submit {
+      display: none;
+    }
+    .search-field {
+      border-radius: 0;
+      padding: 0.5em;
+      border: 1px solid $color__brand-lightgrey;
+      text-transform: none;
+      display: block;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 }
