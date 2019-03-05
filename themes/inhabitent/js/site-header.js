@@ -19,7 +19,7 @@ jQuery(function() {
 
   //triggers search button functionality when  enter key is pressed while focused on the search field
   jQuery(document).on('keypress', function(event) {
-    if (event.which == 13 && jQuery('.search-field').is(':focus')) {
+    if (event.which === 13 && jQuery('.search-field').is(':focus')) {
       doSearch = true;
       jQuery('.search-submit').trigger('click');
     }
@@ -27,14 +27,16 @@ jQuery(function() {
 
   //makes the search field disepear when focused away
   jQuery('.site-header').on('focusout', '.search-field', function() {
-    jQuery('.search-field').removeClass('search-field-on');
+    if (jQuery('.search-field').val().length === 0) {
+      jQuery('.search-field').removeClass('search-field-on');
+    }
   });
 
   //Change header style depending on the current page
   if (jQuery('body.home').length || jQuery('body.page-template-about').length) {
     jQuery('.site-header').removeClass('sticky-header');
     jQuery('.site-header').addClass('fixed-header');
-    jQuery(window).scroll(function(event) {
+    jQuery(window).scroll(function() {
       let scroll = jQuery(window).scrollTop();
       if (scroll > jQuery(window).height()) {
         jQuery('.site-header').removeClass('fixed-header');
