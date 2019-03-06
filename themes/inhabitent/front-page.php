@@ -75,6 +75,7 @@ get_header(); ?>
                      </li>
                      <?php endwhile; wp_reset_query(); ?>
             </ul>
+            <p><a href=<?php echo get_post_type_archive_link('adventure');?>>More Adventures</a></p>
          </section>
 		</main><!-- #main -->
 	</div><!-- #primary -->
