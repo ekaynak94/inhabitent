@@ -117,14 +117,9 @@ function inhabitent_adventure() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 		'show_in_rest'    		=> true,
-		'template_lock'			=> 'all',
-        'template' => array(
-            array( 'core/paragraph', array(
-                'placeholder' => 'Description for the adventure',
-			) ),
-        ),
+		'template_lock'			=> 'all'
 	);
 	register_post_type( 'adventure', $args );
 
 }
-add_action( 'init', 'inhabitent_adventure', 0 );
+add_action( 'init', 'inhabitent_adventure', 1 );
