@@ -1051,17 +1051,17 @@ body.blog .entry-meta {
 .search-no-results .site-content .search-form .search-field {
   display: inline-block; }
 
-.error404 .search-form .search-submit {
+.error404 .page-content .search-submit {
   display: none; }
 
-.error404 .search-form .search-field {
+.error404 .page-content .search-field {
   border-radius: 0;
   padding: 0.5em;
   border: 1px solid #a1a1a1;
   text-transform: none;
   display: block; }
 
-.error404 ul {
+.error404 .page-content ul {
   margin: 0;
   padding: 0;
   list-style: none; }

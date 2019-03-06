@@ -152,7 +152,7 @@ body.blog {
 }
 // 404 page
 .error404 {
-  .search-form {
+  .page-content {
     .search-submit {
       display: none;
     }
@@ -163,10 +163,10 @@ body.blog {
       text-transform: none;
       display: block;
     }
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
   }
 }
