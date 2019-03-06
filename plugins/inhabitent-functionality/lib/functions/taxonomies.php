@@ -44,3 +44,42 @@ function inhabitent_product_type() {
 
 }
 add_action( 'init', 'inhabitent_product_type', 0 );
+
+function inhabitent_adventure_type() {
+
+	$labels = array(
+		'name'                       => 'Adventure Types',
+		'singular_name'              => 'Adventure Type',
+		'menu_name'                  => 'Adventure Type',
+		'all_items'                  => 'All Adventure Types',
+		'parent_item'                => 'Parent Adventure Type',
+		'parent_item_colon'          => 'Parent Adventure Type:',
+		'new_item_name'              => 'New Adventure Type',
+		'add_new_item'               => 'Add New Adventure Type',
+		'edit_item'                  => 'Edit Adventure Type',
+		'update_item'                => 'Update Adventure Type',
+		'view_item'                  => 'View Adventure Type',
+		'separate_items_with_commas' => 'Separate adventure types with commas',
+		'add_or_remove_items'        => 'Add or remove adventure types',
+		'choose_from_most_used'      => 'Choose from the most used',
+		'popular_items'              => 'Popular Items',
+		'search_items'               => 'Search Adventure Types',
+		'not_found'                  => 'Not Found',
+		'no_terms'                   => 'No Adventure Types',
+		'items_list'                 => 'Adventure Types list',
+		'items_list_navigation'      => 'Adventure Types list navigation',
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		'show_in_rest'               => true,
+	);
+	register_taxonomy( 'adventure_type', array( 'adventure' ), $args );
+
+}
+add_action( 'init', 'inhabitent_adventure_type', 0 );
