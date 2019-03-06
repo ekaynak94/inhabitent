@@ -57,8 +57,25 @@ get_header(); ?>
                <?php endforeach; wp_reset_postdata(); ?>
          </ul>
          </section>
-
-  
+         <section class="container latest-adventures">
+            <h2>Latest Adventures</h2>   
+            <ul class="front-page-adventures">
+                  <?php $loop = new WP_Query(array('post_type'=>'adventure','order'=>'ASC','posts_per_page'=>4));?>
+                  <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                     <li>
+                     <?php the_post_thumbnail('large',['class'=>'thumbnail']);?>
+                        <div class='adventure-text'>
+                           <h3>
+                              <a href=<?php the_permalink();?>>
+                                 <?php the_title();?>
+                              </a>
+                           </h3>
+                           <a class="link-button" href=<?php the_permalink();?>>Read More</a>
+                        </div>
+                     </li>
+                     <?php endwhile; wp_reset_query(); ?>
+            </ul>
+         </section>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
