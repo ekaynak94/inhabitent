@@ -1126,6 +1126,27 @@ body.blog .entry-meta {
   height: auto;
   width: 100%; }
 
+.comment-list {
+  margin-left: 0;
+  padding-left: 0; }
+
+.comment-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 1em 0;
+  border-bottom: 1px solid #a1a1a1; }
+
 .post-type-archive .site-content,
 .tax-product_type .site-content {
   margin-top: 100px;
