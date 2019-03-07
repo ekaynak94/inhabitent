@@ -80,3 +80,64 @@ body.home {
     font-size: $font__base-size * 0.75;
   }
 }
+.front-page-adventures {
+  display: grid;
+  height: 400px;
+  grid-gap: 20px;
+  grid-template-areas:
+    'post-one post-one post-two post-two'
+    'post-one post-one post-three post-four';
+
+  li {
+    padding: 1em;
+    a {
+      color: white;
+      border-color: white;
+      &:hover {
+        color: $color__brand-yellow;
+      }
+    }
+    .link-button {
+      color: white !important;
+      &:hover {
+        color: black;
+        background-color: $color__brand-green;
+        border-color: $color__brand-green;
+      }
+    }
+
+    &:first-child {
+      grid-area: post-one;
+      background-image: url('../../assets/images/adventure-photos/canoe-girl.jpg');
+    }
+    &:nth-child(2) {
+      grid-area: post-two;
+      background-image: url('../../assets/images/adventure-photos/beach-bonfire.jpg');
+    }
+    &:nth-child(3) {
+      grid-area: post-three;
+      background-image: url('../../assets/images/adventure-photos/mountain-hikers.jpg');
+    }
+    &:last-child {
+      grid-area: post-four;
+      background-image: url('../../assets/images/adventure-photos/night-sky.jpg');
+    }
+    background-size: cover;
+    background-position: center;
+  }
+}
+.latest-adventures {
+  p {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    a {
+      background-color: $color__brand-green;
+      color: white;
+      box-sizing: border-box;
+      padding: 0.5em 1em;
+      font-family: $font__accent-family;
+      text-transform: uppercase;
+      margin: 0.5em auto;
+    }
+  }
+}
