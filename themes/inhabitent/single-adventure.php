@@ -12,13 +12,13 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-            <article class='container' id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <div class="adventure-page-image">
                     <?php if ( has_post_thumbnail() ) : ?>
                         <?php the_post_thumbnail( 'large' ); ?>
                     <?php endif; ?>
                 </div>
-                <div class='adventure-page-info'>
+                <div class='adventure-page-info container'>
                     <header class="entry-header">
                         <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>		
                     </header><!-- .entry-header -->
