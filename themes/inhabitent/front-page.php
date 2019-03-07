@@ -59,7 +59,7 @@ get_header(); ?>
          </section>
          <section class="container latest-adventures">
             <h2>Latest Adventures</h2>   
-            <ul class="front-page-adventures">
+            <ul class="adventures-grid">
                   <?php $loop = new WP_Query(array('post_type'=>'adventure','order'=>'ASC','posts_per_page'=>4));?>
                   <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                      <li>
