@@ -25,7 +25,7 @@ get_header(); ?>
                <?php $product_types=get_terms('product_type');?>
                <?php foreach ( $product_types as $product_type ) : setup_postdata( $product_type ); ?>
                   <li>
-                     <img src=<?php echo get_template_directory_uri().'/assets/images/product-type-icons/' . $product_type->slug . '.svg';?>>
+                     <img src=<?php echo get_template_directory_uri().'/assets/images/product-type-icons/' . $product_type->slug . '.svg';?> alt=<?php echo $product_type->name?>>
                      <p><?php echo $product_type->description ?></p>
                      <a href=<?php echo get_term_link($product_type)?>> <?php echo $product_type->name?> stuff</a>
                   </li>
