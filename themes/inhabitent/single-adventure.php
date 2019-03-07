@@ -15,7 +15,7 @@ get_header(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <div class="adventure-page-image">
                     <?php if ( has_post_thumbnail() ) : ?>
-                        <?php the_post_thumbnail( 'large' ); ?>
+                        <?php the_post_thumbnail( 'full' ); ?>
                     <?php endif; ?>
                 </div>
                 <div class='adventure-page-info container'>
