@@ -867,36 +867,36 @@ body.home ul {
   .journal-text span {
     font-size: 12px; }
 
-.front-page-adventures {
+.adventures-grid {
   display: grid;
   height: 400px;
   grid-gap: 20px;
   grid-template-areas: 'post-one post-one post-two post-two' 'post-one post-one post-three post-four'; }
-  .front-page-adventures li {
+  .adventures-grid li {
     padding: 1em;
     background-size: cover;
     background-position: center; }
-    .front-page-adventures li a {
+    .adventures-grid li a {
       color: white;
       border-color: white; }
-      .front-page-adventures li a:hover {
+      .adventures-grid li a:hover {
         color: #f0e4d1; }
-    .front-page-adventures li .link-button {
+    .adventures-grid li .link-button {
       color: white !important; }
-      .front-page-adventures li .link-button:hover {
+      .adventures-grid li .link-button:hover {
         color: black;
         background-color: #248a83;
         border-color: #248a83; }
-    .front-page-adventures li:first-child {
+    .adventures-grid li:first-child {
       grid-area: post-one;
       background-image: url("../../assets/images/adventure-photos/canoe-girl.jpg"); }
-    .front-page-adventures li:nth-child(2) {
+    .adventures-grid li:nth-child(2) {
       grid-area: post-two;
       background-image: url("../../assets/images/adventure-photos/beach-bonfire.jpg"); }
-    .front-page-adventures li:nth-child(3) {
+    .adventures-grid li:nth-child(3) {
       grid-area: post-three;
       background-image: url("../../assets/images/adventure-photos/mountain-hikers.jpg"); }
-    .front-page-adventures li:last-child {
+    .adventures-grid li:last-child {
       grid-area: post-four;
       background-image: url("../../assets/images/adventure-photos/night-sky.jpg"); }
 
@@ -1111,6 +1111,20 @@ body.blog .entry-meta {
   margin: 0;
   padding: 0;
   list-style: none; }
+
+.post-type-archive-adventure ul {
+  height: 1000px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  grid-template-areas: 'post-one post-two' 'post-three post-four'; }
+
+.single-adventure article {
+  margin-bottom: 3em; }
+
+.single-adventure .adventure-page-image img {
+  height: auto;
+  width: 100%; }
 
 .post-type-archive .site-content,
 .tax-product_type .site-content {

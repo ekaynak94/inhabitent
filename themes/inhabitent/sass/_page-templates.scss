@@ -170,3 +170,25 @@ body.blog {
     }
   }
 }
+
+//adventures archive
+.post-type-archive-adventure {
+  ul {
+    height: 1000px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    grid-template-areas: 'post-one post-two' 'post-three post-four';
+  }
+}
+
+//single adventures
+.single-adventure {
+  article {
+    margin-bottom: 3em;
+  }
+  .adventure-page-image img {
+    height: auto;
+    width: 100%;
+  }
+}
