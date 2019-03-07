@@ -23,9 +23,19 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					get_template_part( 'template-parts/content', 'products' );
-				?>
+				<div id="post-<?php the_ID(); ?>" <?php post_class(array("product-grid-item")); ?>>
+					<?php if ( has_post_thumbnail() ) : ?>
+						<div class='product-image-wrapper'>
+							<a href=<?php echo get_permalink();?>>
+								<?php the_post_thumbnail( 'medium' ); ?>
+							</a>
+						</div>
+					<?php endif; ?>
+					<div class="product-grid-text">
+						<?php the_title( '<p class="entry-title">', '</p>' ); ?>
+						<p><?php echo CFS()->get('product_price'); ?></p>
+					</div>
+				</div><!-- #post-## -->
 
 			<?php endwhile; ?>
 		</div>
