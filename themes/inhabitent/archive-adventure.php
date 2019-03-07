@@ -19,15 +19,16 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
+			<ul class="adventures-grid">
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+			<li>
+				<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+				<a class="readmore link-button" href=<?php echo get_permalink();?>>Read More &rarr;</a>
+			</li><!-- #post-## -->
 
 			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
+		</ul>
 
 		<?php else : ?>
 
@@ -37,6 +38,4 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
