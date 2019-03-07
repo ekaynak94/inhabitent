@@ -1,4 +1,4 @@
-# Quotes on Dev Starter
+# Inhabitent
 
 A WordPress theme for the Inhabitent website, forked from Underscores.
 
