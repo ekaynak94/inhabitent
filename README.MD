@@ -4,7 +4,7 @@ A WordPress theme for the Inhabitent website, forked from Underscores.
 
 ## Screenshots
 
-![Inhabitent website](screenshot.png)
+![Inhabitent website](./themes/inhabitent/screenshot.png)
 
 ##Author
 
